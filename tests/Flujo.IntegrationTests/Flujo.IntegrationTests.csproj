@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="6.0.4" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" />
+    <PackageReference Include="Xunit.SkippableFact" Version="1.5.85" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Flujo.Core\Flujo.Core.csproj" />
+    <ProjectReference Include="..\..\src\Flujo.Documents\Flujo.Documents.csproj" />
+    <ProjectReference Include="..\..\src\Flujo.AI\Flujo.AI.csproj" />
+    <ProjectReference Include="..\..\src\Flujo.LibreOffice\Flujo.LibreOffice.csproj" />
+    <ProjectReference Include="..\..\src\Flujo.Templates\Flujo.Templates.csproj" />
+    <ProjectReference Include="..\..\src\Flujo.Instructions\Flujo.Instructions.csproj" />
+    <ProjectReference Include="..\..\src\Flujo.Quality\Flujo.Quality.csproj" />
+  </ItemGroup>
+
+</Project>

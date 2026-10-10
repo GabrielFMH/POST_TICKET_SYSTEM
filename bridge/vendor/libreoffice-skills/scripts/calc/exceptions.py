@@ -1,0 +1,100 @@
+"""Custom exceptions for the Calc skill."""
+
+from exceptions import (
+    DocumentNotFoundError as _BaseDocumentNotFoundError,
+    PatchOperationError as _BasePatchOperationError,
+    PatchSyntaxError as _BasePatchSyntaxError,
+    SessionClosedError,
+    SkillError,
+    SnapshotError as _BaseSnapshotError,
+)
+
+
+class CalcSkillError(SkillError):
+    """Base error for Calc skill."""
+
+
+class CalcSessionError(CalcSkillError, SessionClosedError):
+    """Error for Calc session lifecycle misuse."""
+
+
+class PatchSyntaxError(CalcSkillError, _BasePatchSyntaxError):
+    """Error for malformed Calc patch input."""
+
+
+class PatchOperationError(CalcSkillError, _BasePatchOperationError):
+    """Base error for parsed Calc patch operations."""
+
+
+class InvalidTargetError(PatchOperationError):
+    """Error for malformed or contradictory targets."""
+
+
+class TargetNoMatchError(PatchOperationError):
+    """Error when a valid target matches no Calc content."""
+
+
+class TargetAmbiguousError(PatchOperationError):
+    """Error when a valid target matches more than one result."""
+
+
+class InvalidFormattingError(PatchOperationError):
+    """Error for empty or unsupported formatting payloads."""
+
+
+class InvalidValidationError(PatchOperationError):
+    """Error for malformed or unsupported validation payloads."""
+
+
+class InvalidPayloadError(PatchOperationError):
+    """Error for invalid operation payload data."""
+
+
+class NamedRangeNotFoundError(PatchOperationError):
+    """Error when a named range target cannot be resolved."""
+
+
+class ChartNotFoundError(PatchOperationError):
+    """Error when a chart target cannot be resolved."""
+
+
+class DocumentNotFoundError(CalcSkillError, _BaseDocumentNotFoundError):
+    """Error when spreadsheet file does not exist."""
+
+
+class SnapshotError(CalcSkillError, _BaseSnapshotError):
+    """Base error for snapshot operations."""
+
+
+class InvalidSheetError(SnapshotError):
+    """Error when sheet name does not exist."""
+
+
+class InvalidAreaError(SnapshotError):
+    """Error when area coordinates are invalid."""
+
+
+class FilterError(SnapshotError):
+    """Error when PNG export filter fails."""
+
+
+__all__ = [
+    "CalcSkillError",
+    "CalcSessionError",
+    "PatchSyntaxError",
+    "PatchOperationError",
+    "InvalidTargetError",
+    "TargetNoMatchError",
+    "TargetAmbiguousError",
+    "InvalidFormattingError",
+    "InvalidValidationError",
+    "InvalidPayloadError",
+    "NamedRangeNotFoundError",
+    "ChartNotFoundError",
+    "DocumentNotFoundError",
+    "SnapshotError",
+    "InvalidSheetError",
+    "InvalidAreaError",
+    "FilterError",
+    "SessionClosedError",
+]

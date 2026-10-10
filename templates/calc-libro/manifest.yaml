@@ -1,0 +1,19 @@
+name: libro
+kind: calc
+sourceFile: plantilla.ods
+exportPdf: true
+markers:
+  - id: ventas
+    kind: cell
+    target: Movimientos!B2
+  - id: costos
+    kind: cell
+    target: Movimientos!B3
+allowedFormulas:
+  - Movimientos!C2
+preservedFormulas:
+  - sheet: Movimientos
+    cell: C2
+    formula: "=B2-B3"
+checkableRules:
+  - preserved_formulas

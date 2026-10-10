@@ -1,0 +1,27 @@
+name: informe
+kind: writer
+sourceFile: plantilla.odt
+exportPdf: true
+markers:
+  - id: titulo
+    kind: text
+    target: "{{titulo}}"
+  - id: introduccion
+    kind: text
+    target: "{{introduccion}}"
+  - id: desarrollo
+    kind: text
+    target: "{{desarrollo}}"
+  - id: referencias
+    kind: text
+    target: "{{referencias}}"
+requiredSections:
+  - "1. Título"
+  - "2. Introducción"
+  - "3. Desarrollo"
+  - "4. Referencias"
+checkableRules:
+  - required_sections
+  - required_markers
+  - no_invented_references
+  - heading_numbering

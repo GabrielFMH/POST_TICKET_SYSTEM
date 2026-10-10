@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Flujo.Core\Flujo.Core.csproj" />
+    <ProjectReference Include="..\Flujo.Documents\Flujo.Documents.csproj" />
+    <ProjectReference Include="..\Flujo.AI\Flujo.AI.csproj" />
+    <ProjectReference Include="..\Flujo.Templates\Flujo.Templates.csproj" />
+    <ProjectReference Include="..\Flujo.Instructions\Flujo.Instructions.csproj" />
+    <ProjectReference Include="..\Flujo.LibreOffice\Flujo.LibreOffice.csproj" />
+    <ProjectReference Include="..\Flujo.Quality\Flujo.Quality.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="10.0.12" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="10.0.12" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.12" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>

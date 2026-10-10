@@ -1,0 +1,16 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Flujo.AI/Flujo.AI.csproj" />
+    <Project Path="src/Flujo.Cli/Flujo.Cli.csproj" />
+    <Project Path="src/Flujo.Core/Flujo.Core.csproj" />
+    <Project Path="src/Flujo.Documents/Flujo.Documents.csproj" />
+    <Project Path="src/Flujo.Instructions/Flujo.Instructions.csproj" />
+    <Project Path="src/Flujo.LibreOffice/Flujo.LibreOffice.csproj" />
+    <Project Path="src/Flujo.Quality/Flujo.Quality.csproj" />
+    <Project Path="src/Flujo.Templates/Flujo.Templates.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Flujo.IntegrationTests/Flujo.IntegrationTests.csproj" />
+    <Project Path="tests/Flujo.UnitTests/Flujo.UnitTests.csproj" />
+  </Folder>
+</Solution>

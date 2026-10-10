@@ -1,0 +1,6 @@
+﻿Origen: https://github.com/dfk1352/LibreOffice-skills
+Commit: b90510190a03370fa93f52f51eca167e2cdf6e8b
+Licencia: MIT (archivo LICENSE)
+Contenido: módulos compartidos y paquetes writer y calc.
+Excluido: impress.
+Adaptación local: uno_bridge.py acepta SOFFICE_PATH y soffice.exe en Windows.
